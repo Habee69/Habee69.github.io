@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>👀 Type Your Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    input[type=text] {
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid pink;
+      border-radius: 4px;
+    }
+    button {
+      background-color: pink;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+<body>
+  <h1>👀 Type Your Name</h1>
+  <form onsubmit="showLove(event)">
+    <label for="name">Enter your name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Your name.."><br>
+    <button type="submit">Click here for affection</button>
+  </form>
+  <p id="output"></p>
+  <script>
+    function showLove(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value.trim().toLowerCase();
+      if (name === "haadiya") {
+        document.getElementById("output").textContent = "I love you, Haadiya! ❤️";
+      } else {
+        document.getElementById("output").textContent = "Shush go away, I'm taken by the most amazing beautiful cutest girl alive named Haadiya.";
+      }
+    }
+  </script>
+</body>
+</html>
